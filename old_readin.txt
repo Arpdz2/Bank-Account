@@ -1,0 +1,22 @@
+public void readIn() throws IOException
+    {
+     BufferedReader br = new BufferedReader(new FileReader("ACCTDATA.txt"));
+		
+ 
+			String CurrentLine;
+                        double balanceget = 0;
+                        int i = 0;
+ 
+			while ((CurrentLine = br.readLine()) != null) 
+                        {
+                            
+				Double doubleString = Double.parseDouble(CurrentLine);
+                                balanceget = doubleString;
+                                AcctArray[i] = new Account(balanceget);
+                                i++;
+                               
+                                
+			}
+      
+            
+    }
